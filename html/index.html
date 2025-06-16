@@ -4,77 +4,203 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV của Nguyễn Tấn Vinh</title>
+    <title>Portfolio - Nguyễn Văn A</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 
 <body>
-    <div class="cv-container">
-        <div class="header">
-            <div class="profile-photo">
-                <img src="/image/anhnen.jpg" alt="Ảnh đại diện">
-            </div>
-            <div class="personal-info">
-                <h1>NGUYỄN TẤN VINH</h1>
-                <p><strong>Sinh viên Công nghệ thông tin</strong></p>
-                <div class="contact-details">
-                    <p><i class="fas fa-envelope"></i> nguyentanvinh0403@gmail.com</p>
-                    <p><i class="fas fa-phone"></i> 0338167018</p>
-                    <p><i class="fab fa-github"></i> <a href="https://github.com/TANVINH0403" target="_blank">GitHub</a>
-                    </p>
-                    <p><i class="fas fa-map-marker-alt"></i> Tuy Phước, Bình Định</p>
+    <canvas id="particle-bg"></canvas>
+    <nav class="navbar">
+        <div class="logo">Nguyễn Văn A</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#hobbies">Hobbies</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button class="theme-toggle" aria-label="Toggle Dark Mode">
+            <span class="sun-icon">☀️</span>
+            <span class="moon-icon">🌙</span>
+        </button>
+        <button class="menu-toggle">☰</button>
+    </nav>
+    <div class="container">
+        <section class="section" id="home">
+            <div class="hero">
+                <img src="/image/anhnen.jpg" alt="Avatar" class="avatar">
+                <h1>Nguyễn Tấn Vinh</h1>
+                <p>Web Developer | C# & ASP.NET</p>
+                <div class="cta-buttons">
+                    <a href="#contact" class="btn">Liên hệ</a>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div class="main-content">
-            <section class="section">
-                <h2>MỤC TIÊU NGHỀ NGHIỆP</h2>
-                <ul>
-                    <li>Mong muốn áp dụng kiến thức và kỹ năng đã học để đóng góp vào sự phát triển của công ty trong
-                        lĩnh vực Công nghệ thông tin.</li>
-                    <li>Tìm kiếm cơ hội học hỏi, phát triển chuyên môn và thăng tiến trong môi trường làm việc chuyên
-                        nghiệp, năng động.</li>
-                    <li>Đặt mục tiêu trở thành một chuyên viên IT có kiến thức vững chắc, khả năng giải quyết vấn đề
-                        hiệu quả và đóng góp tích cực vào các dự án của công ty.</li>
-                </ul>
-            </section>
-
-            <section class="section">
-                <h2>KINH NGHIỆM LÀM VIỆC</h2>
-                <div class="experience-item">
-                    <h3>Chưa có</h3>
+        <section class="section" id="about">
+            <h2>Mục tiêu nghề nghiệp</h2>
+            <div class="card">
+                <img class="career-goal" src="/image/careergoal.jpg " alt="Career Goal">
+                <div class="card-content">
+                    <p>Phấn đấu trở thành lập trình viên full-stack chuyên nghiệp, phát triển ứng dụng web sáng tạo với
+                        C# và ASP.NET, đóng góp giá trị cho công ty công nghệ hàng đầu.</p>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <section class="section">
-                <h2>HỌC VẤN</h2>
-                <div class="education-item">
-                    <h3>Sinh Viên Công nghệ thông tin</h3>
-                    <p><strong>Đại học Giao Thông Vận Tải TP.HCM</strong> | 2023 - 2027</p>
-                    <ul>
-                        <li>Chuyên ngành: Kỹ thuật Phần mềm</li>
-                        <li>Điểm trung bình tích lũy: 3.0</li>
-                    </ul>
+        <section class="section" id="skills">
+            <h2>Kỹ năng chuyên môn</h2>
+            <div class="skills-content">
+                <div class="skill-item">
+                    <img src="/image/html.png" alt="HTML">
+                    <div class="skill-info">
+                        <span class="skill-name">HTML</span>
+                        <span class="skill-percentage">90%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress" data-percentage="90"></div>
+                    </div>
                 </div>
-            </section>
-
-            <section class="section">
-                <h2>KỸ NĂNG</h2>
-                <div class="skills-list">
-                    <p><strong>Ngôn ngữ lập trình:</strong>C#</p>
-                    <p><strong>Frameworks/Thư viện:</strong> ASP.Net</p>
-                    <p><strong>Cơ sở dữ liệu:</strong> MySQL</p>
-                    <p><strong>Công cụ:</strong> Git, Visual Studio Code 2022</p>
-                    <p><strong>Hệ điều hành:</strong> Windows</p>
-                    <p><strong>Kỹ năng mềm:</strong> Giải quyết vấn đề, Làm việc nhóm, Giao tiếp, Tư duy logic, Tự học.
-                    </p>
+                <div class="skill-item">
+                    <img src="/image/css.png" alt="CSS">
+                    <div class="skill-info">
+                        <span class="skill-name">CSS</span>
+                        <span class="skill-percentage">85%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress" data-percentage="85"></div>
+                    </div>
                 </div>
-            </section>
+                <div class="skill-item">
+                    <img src="/image/csharp.png" alt="C#">
+                    <div class="skill-info">
+                        <span class="skill-name">C#</span>
+                        <span class="skill-percentage">80%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress" data-percentage="80"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <img src="/image/ASP.png" alt="ASP.NET">
+                    <div class="skill-info">
+                        <span class="skill-name">ASP.NET</span>
+                        <span class="skill-percentage">75%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress" data-percentage="75"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <img src="/image/SQL.png" alt="SQL">
+                    <div class="skill-info">
+                        <span class="skill-name">SQL</span>
+                        <span class="skill-percentage">70%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress" data-percentage="70"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        </div>
+        <section class="section" id="projects">
+            <h2>Dự án cá nhân/nhóm <button class="toggle-btn" data-target="projects-content">Ẩn/Hiện</button></h2>
+            <div class="projects-content">
+                <div class="project-grid">
+                    <div class="card">
+                        <div class="card-content">
+                            <h4>Quản lý kho hàng</h4>
+                            <p>Ứng dụng web ASP.NET quản lý tồn kho và đơn hàng, tích hợp SQL Server.</p>
+
+                        </div>
+                    </div>
+                    <div class="card">
+
+                        <div class="card-content">
+                            <h4>Website bán hàng</h4>
+                            <p>Website thương mại điện tử với C# và ASP.NET</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="education">
+            <h2>Học vấn</h2>
+            <div class="card">
+                <img class="education" src="/image/hocvan.jpg" alt="Education">
+                <div class="card-content">
+                    <h4>Đại học Giao thông Vận tải TP.HCM</h4>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="hobbies">
+            <h2>Sở thích cá nhân</h2>
+            <div class="hobbies-grid">
+                <div class="card">
+                    <img src="/image/dabong.jpg" alt="Soccer">
+                    <div class="card-content">
+                        <h4>Đá bóng</h4>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="/image/choigame.jpg" alt="Gaming">
+                    <div class="card-content">
+                        <h4>Chơi game</h4>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="/image/coding.jpg" alt="Coding">
+                    <div class="card-content">
+                        <h4>Viết code</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="contact">
+            <h2>Liên hệ</h2>
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>nguyentanvinh0403@gmail.com</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>0338 167 018</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fa-solid fa-map-pin"></i>
+                    <span>Tuy Phước, Bình Định, Việt Nam</span>
+                </div>
+
+                <div class="contact-item">
+                    <a href="https://github.com/TANVINH0403"><i class="fa-brands fa-github"></i></a>
+                </div>
+
+                <div class="contact-item">
+                    <a href="https://facebook.com/nguyentanvinh"><i class="fa-brands fa-facebook"></i></a>
+                </div>
+            </div>
+        </section>
     </div>
+    <footer>
+        <p>© 2025 Nguyễn Văn A. All rights reserved.</p>
+        <div class="social-links">
+            <a href="https://facebook.com/nguyentanvinh" target="_blank">Facebook</a>
+        </div>
+    </footer>
+    <div class="popup" id="contact-popup"></div>
+    <script src="/js/script.js"></script>
 </body>
 
 </html>
